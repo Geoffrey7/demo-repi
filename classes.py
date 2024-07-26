@@ -1,16 +1,29 @@
 class Employee:
-  def __init__(self,first,last,pay) -> None:
-    self.first = first
-    self.last = last
-    self.pay = pay
-    self.email = first + "." + last + "@gmail.com"
+    num_of_emps = 0
+    raise_amount = 1.04
 
-  def fullname(self):
-    return '{} {}' .format(self.first, self.last)
+    def __init__(self, first, last, pay):
+        self. first = first
+        self.last = last
+        self.pay = pay
+        self.email = first + '.' + last + '@gmail.com'
 
-emp1 = Employee("Geoffrey", "Kioi","170,000")
-emp2 = Employee("Ann","Bell","170,000")
+        Employee.num_of_emps += 1
 
-emp1.fullname()
-print(Employee.fullname(emp2))
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+    
+    
+    def apply_raise(self):
+        self.pay = int(self.pay * self.raise_amount)
 
+emp1 = Employee('Ann', 'Njoki', 120000)
+emp2 = Employee('Terry','Wanja', 120000)   
+
+emp1.apply_raise()
+print(emp1.pay)
+
+
+print(Employee.raise_amount)
+
+print(Employee.num_of_emps)
