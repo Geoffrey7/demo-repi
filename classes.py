@@ -11,7 +11,7 @@ class Employee:
         Employee.num_of_emps += 1
 
     def fullname(self):
-        return '{} {}'.format(self.first, self.last)
+        return '{riest} {last}'
     
     
     def apply_raise(self):
